@@ -1,4 +1,7 @@
 # venv
 audiomatch
 
+# others
+.idea
+.DS_Store
 
