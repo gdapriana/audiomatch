@@ -6,7 +6,6 @@ from core_functions.mfcc.prepocessing import pre_emphasis, frame_blocking, windo
 from core_functions.mfcc.mfcc import fft, mel_filterbank, signal_power_to_db, cosine_transform
 
 def extract_mfcc(
-  audio_title: str,
   audio_path: str,
   emphasis: float,
   frame_size: float,
@@ -14,6 +13,7 @@ def extract_mfcc(
   n_fft: int,
   n_mels: int,
   n_mfcc: int,
+  audio_title: str = None,
   out_path: str = None,
 ) -> Union[np.ndarray, None]:
   """
@@ -60,7 +60,9 @@ def extract_mfcc(
   if emphasis is None or frame_size is None or frame_hop is None or n_fft is None or n_mels is None or n_mfcc is None:
     raise ValueError('mfcc parameters cannot be none')
 
-  print(f"extracting {audio_title}...")
+  if audio_title is not None:
+    print(f"extracting {audio_title}...")
+
   signal, sampling_rate = librosa.load(audio_path)
   signal = 1.0 * signal
 

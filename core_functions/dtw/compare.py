@@ -9,7 +9,9 @@ def compare(trains, tests):
     start_exec = time.time()
     for train in trains:
       x = np.load(train['npy_path'])
+      print(f"x: {x.shape}")
       y = np.load(test['npy_path'])
+      print(f"y: {y.shape}")
       distance, _ = fastdtw(x, y)
       all_distance.append({ 'train_title': train['title'], 'train_artist': train['artist'], 'distance': round(float(distance), 2) })
     end_exec = round((time.time() - start_exec), 2)

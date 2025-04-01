@@ -1,3 +1,4 @@
+import numpy as np
 import pandas as pd
 import os
 from core_functions.mfcc.extractor import extract_mfcc
@@ -47,3 +48,14 @@ def extract_test(test_data) -> None:
             n_mfcc=case['params']['n_mfcc'],
             out_path=case['out_path']
           )
+
+def extract_single(audio, params: dict) -> np.ndarray:
+  return extract_mfcc(
+    audio_path=audio,
+    emphasis=params['emphasis'],
+    frame_size=params['frame_size'],
+    frame_hop=params['frame_hop'],
+    n_fft=params['n_fft'],
+    n_mels=params['n_mels'],
+    n_mfcc=params['n_mfcc']
+  )

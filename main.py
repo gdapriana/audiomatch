@@ -1,3 +1,6 @@
+import numpy as np
+
+from core_functions.dtw.dtw import fastdtw
 from suport_function.extract import extract_train, extract_test
 from suport_function.matching import matching_features
 

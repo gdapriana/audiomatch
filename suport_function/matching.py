@@ -1,14 +1,10 @@
 import pandas as pd
 import os
+import numpy as np
 from core_functions.dtw.compare import compare
-# {
-#   'matching_name': 'train_10_with_test_normal_50_10',
-#   'train_path': 'resources/features/train/1_0',
-#   'test_path': 'resources/features/test/normal/50/1_0',
-#   'train_csv': 'resources/csv/train.csv',
-#   'test_csv': 'resources/csv/test_normal_50.csv',
-#   'out_path': 'resources/matching/train_10_with_test_normal_50_10.csv'
-# },
+from core_functions.dtw.dtw import fastdtw
+
+
 def matching_features(matching_data) -> None:
   for matching in matching_data:
     matching_name = matching['matching_name']
@@ -35,4 +31,13 @@ def matching_features(matching_data) -> None:
     result = compare(all_train_npy, all_test_npy)
     pd.DataFrame(result).to_csv(out_path, index=False)
     print("done!\n")
+
+def matching_single(database, features):
+  result = []
+  for data in database:
+    train_data = np.load(data['npy_path'])
+    distance, _ = fastdtw(train_data, features)
+    result.append({ 'predicted': data['title'], 'distance': distance })
+  min_distance = min(result, key=lambda x: x['distance'])
+  return min_distance
 
