@@ -27,8 +27,7 @@ def extract_train(train_data)->None:
 
 
 def extract_test(test_data) -> None:
-  for audio_quality, audio_quality_value in test_data.items():
-    for duration, duration_value in audio_quality_value.items():
+    for duration, duration_value in test_data.items():
       for case in duration_value:
         if os.path.exists(case['out_path']) and os.listdir(case['out_path']):
           print(f"{case['out_path']} already extracted")
