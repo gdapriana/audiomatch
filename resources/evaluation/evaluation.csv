@@ -1,0 +1,7 @@
+test_name,accuracy (%),execution_average (s)
+train_05_with_test_100_05,100.0,9.38
+train_05_with_test_50_05,80.0,7.22
+train_10_with_test_100_10,100.0,4.44
+train_10_with_test_50_10,76.67,3.42
+train_15_with_test_100_15,100.0,2.83
+train_15_with_test_50_15,76.67,2.23

@@ -1,3 +1,4 @@
+from core_functions.evaluation.evaluation import evaluation
 from suport_function.extract import extract_train, extract_test
 from suport_function.matching import matching_features
 
@@ -71,7 +72,7 @@ matching_data = [
     'test_path': 'resources/features/test/100/0_5',
     'train_csv': 'resources/csv/train.csv',
     'test_csv': 'resources/csv/test_normal_100.csv',
-    'out_path': 'resources/matching/train_05_with_test_normal_100_05.csv'
+    'out_path': 'resources/matching/train_05_with_test_100_05.csv'
   },
   {
     'matching_name': 'train_05_with_test_50_05',
@@ -79,7 +80,7 @@ matching_data = [
     'test_path': 'resources/features/test/50/0_5',
     'train_csv': 'resources/csv/train.csv',
     'test_csv': 'resources/csv/test_normal_50.csv',
-    'out_path': 'resources/matching/train_05_with_test_normal_50_05.csv'
+    'out_path': 'resources/matching/train_05_with_test_50_05.csv'
   },
   {
     'matching_name': 'train_10_with_test_100_10',
@@ -87,7 +88,7 @@ matching_data = [
     'test_path': 'resources/features/test/100/1_0',
     'train_csv': 'resources/csv/train.csv',
     'test_csv': 'resources/csv/test_normal_100.csv',
-    'out_path': 'resources/matching/train_10_with_test_normal_100_10.csv'
+    'out_path': 'resources/matching/train_10_with_test_100_10.csv'
   },
   {
     'matching_name': 'train_10_with_test_50_10',
@@ -95,7 +96,7 @@ matching_data = [
     'test_path': 'resources/features/test/50/1_0',
     'train_csv': 'resources/csv/train.csv',
     'test_csv': 'resources/csv/test_normal_50.csv',
-    'out_path': 'resources/matching/train_10_with_test_normal_50_10.csv'
+    'out_path': 'resources/matching/train_10_with_test_50_10.csv'
   },
   {
     'matching_name': 'train_15_with_test_100_15',
@@ -103,15 +104,15 @@ matching_data = [
     'test_path': 'resources/features/test/100/1_5',
     'train_csv': 'resources/csv/train.csv',
     'test_csv': 'resources/csv/test_normal_100.csv',
-    'out_path': 'resources/matching/train_15_with_test_normal_100_15.csv'
+    'out_path': 'resources/matching/train_15_with_test_100_15.csv'
   },
   {
-    'matching_name': 'train_15_with_test_normal_50_15',
+    'matching_name': 'train_15_with_test_50_15',
     'train_path': 'resources/features/train/1_5',
     'test_path': 'resources/features/test/50/1_5',
     'train_csv': 'resources/csv/train.csv',
     'test_csv': 'resources/csv/test_normal_50.csv',
-    'out_path': 'resources/matching/train_15_with_test_normal_50_15.csv'
+    'out_path': 'resources/matching/train_15_with_test_50_15.csv'
   },
 ]
 
@@ -123,6 +124,8 @@ if __name__ == "__main__":
 
   # matching dtw
   matching_features(matching_data)
+
   # evaluate
+  evaluation(matching_data)
 
   pass
