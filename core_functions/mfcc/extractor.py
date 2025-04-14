@@ -47,8 +47,8 @@ def extract_mfcc(
           audio_path="audio/example.wav",
           out_path=None,
           emphasis=0.97,
-          frame_size=0.025,
-          frame_hop=0.01,
+          frame_size=1,
+          frame_hop=0.5,
           n_fft=512,
           n_mels=40,
           n_mfcc=13
