@@ -173,3 +173,45 @@ def __expand_window(path, len_x, len_y, radius):
     start_j = new_start_j
 
   return window
+
+import numpy as np
+
+def _fastdtw(A, B):
+  N = len(A)
+  M = len(B)
+
+  # Step 1: Build Cost Matrix (D)
+  D = np.full((N+1, M+1), float('inf'))  # Initialize matrix with inf
+  D[0, 0] = 0  # Starting point (0,0)
+
+  # Step 2: Initialize the Cost Matrix
+  for i in range(1, N+1):
+    D[i, 0] = float('inf')  # Fill first column with inf
+  for j in range(1, M+1):
+    D[0, j] = float('inf')  # Fill first row with inf
+
+  # Step 3: Calculate Cost Matrix
+  for i in range(1, N+1):
+    for j in range(1, M+1):
+      cost = abs(A[i-1] - B[j-1])  # Calculate cost (absolute difference)
+      # Equation (13) - choose minimum cost from three possible paths
+      D[i, j] = cost + min(D[i-1, j-1], D[i-1, j], D[i, j-1])
+
+  # Step 4: Get Alignment (Find path through the matrix)
+  i, j = N, M
+  path = [(i-1, j-1)]  # Initialize path with the last point
+  while i > 0 and j > 0:
+    if D[i-1, j-1] <= min(D[i-1, j], D[i, j-1]):
+      i, j = i-1, j-1
+    elif D[i-1, j] <= D[i, j-1]:
+      i, j = i-1, j
+    else:
+      i, j = i, j-1
+    path.append((i-1, j-1))  # Append the current point to the path
+
+  path.reverse()  # Reverse the path to start from the beginning
+
+  # Step 5: Calculate Final Distance
+  final_distance = D[N, M]
+
+  return final_distance, path
