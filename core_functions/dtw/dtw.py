@@ -177,29 +177,31 @@ def __expand_window(path, len_x, len_y, radius):
 import numpy as np
 
 def _fastdtw(A, B):
+  # tahap 1: input (A, B)
+
+  # tahap 2: Flatten dan hittung panjang data input.
+  A = A.flatten()
+  B = B.flatten()
   N = len(A)
   M = len(B)
 
-  # Step 1: Build Cost Matrix (D)
-  D = np.full((N+1, M+1), float('inf'))  # Initialize matrix with inf
-  D[0, 0] = 0  # Starting point (0,0)
-
-  # Step 2: Initialize the Cost Matrix
+  # tahap 3: Inisialisasi Matriks Jarak.
+  D = np.full((N+1, M+1), float('inf')) 
+  D[0, 0] = 0
   for i in range(1, N+1):
-    D[i, 0] = float('inf')  # Fill first column with inf
+    D[i, 0] = float('inf') 
   for j in range(1, M+1):
-    D[0, j] = float('inf')  # Fill first row with inf
+    D[0, j] = float('inf') 
 
-  # Step 3: Calculate Cost Matrix
+  # tahap 4: Hitung Cost (Jarak) antar Elemen.
   for i in range(1, N+1):
     for j in range(1, M+1):
-      cost = abs(A[i-1] - B[j-1])  # Calculate cost (absolute difference)
-      # Equation (13) - choose minimum cost from three possible paths
+      cost = abs(A[i-1] - B[j-1]) 
       D[i, j] = cost + min(D[i-1, j-1], D[i-1, j], D[i, j-1])
 
-  # Step 4: Get Alignment (Find path through the matrix)
+  # tahap 5: Temukan Jalur Optimal
   i, j = N, M
-  path = [(i-1, j-1)]  # Initialize path with the last point
+  path = [(i-1, j-1)] 
   while i > 0 and j > 0:
     if D[i-1, j-1] <= min(D[i-1, j], D[i, j-1]):
       i, j = i-1, j-1
@@ -207,11 +209,12 @@ def _fastdtw(A, B):
       i, j = i-1, j
     else:
       i, j = i, j-1
-    path.append((i-1, j-1))  # Append the current point to the path
+    path.append((i-1, j-1)) 
 
-  path.reverse()  # Reverse the path to start from the beginning
+  path.reverse()
 
-  # Step 5: Calculate Final Distance
+  # Tahap 6: Ditentukan untuk nilai minimum antar jarak dua sinyal berada pada cell dengan kolom terakhir dan baris pertama, serta rute pasangan titik optimal.
   final_distance = D[N, M]
 
+  # tahap 7: Output
   return final_distance, path
