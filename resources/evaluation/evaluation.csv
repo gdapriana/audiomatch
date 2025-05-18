@@ -1,9 +1,9 @@
 test_name,accuracy (%),execution_average (s)
-train_02_with_test_100_02,100.0,23.1
-train_02_with_test_50_02,83.33,18.54
-train_05_with_test_100_05,100.0,8.88
-train_05_with_test_50_05,80.0,7.04
-train_10_with_test_100_10,100.0,4.35
-train_10_with_test_50_10,76.67,3.39
-train_15_with_test_100_15,100.0,2.8
-train_15_with_test_50_15,76.67,2.23
+train_02_with_test_30_02,39.33,17.19
+train_05_with_test_30_05,34.0,6.51
+train_10_with_test_30_10,31.33,3.13
+train_15_with_test_30_15,29.33,2.07
+train_02_with_test_50_02,62.67,18.91
+train_05_with_test_50_05,55.33,8.14
+train_10_with_test_50_10,49.33,5.47
+train_15_with_test_50_15,45.33,3.96

@@ -1,31 +1,151 @@
 title,predicted_title,predicted_artist,dtw_score,exec_time
-23,23,Diamond Eyes,227486.88,3.48
-Blank,Blank,Disfigure,134702.99,3.24
-Clear My Head,Clear My Head,Ellis,163396.46,3.33
-Crazy,Crazy,BEAUZ & JVNA,234529.03,3.21
-Dancefloor,Dancefloor,3rd Prototype,214100.16,3.1
-Defeat The Night,Defeat The Night,"JPB, Ashley Apollodor",253509.94,3.5
-Devil,Devil,Barren Gates,4502.91,3.8
-Dreams,Dreams,Lost Sky,267411.09,3.38
-Flares,Flares,NIVIRO,223610.14,3.23
-Free,Under Water,Fareoh,262936.1,3.26
-Light It Up,Light It Up,Robin Hustin x TobiMorrow,174101.66,3.23
-Make A Stand,Castle,Clarx & Harddope,284190.17,3.23
-Miles Away,Miles Away,"Wontolla, Kasger & Limitless",217260.16,3.36
-My Heart,My Heart,"Different Heaven, EH!DE",244822.74,3.71
-Oblivion,Under Water,Fareoh,291420.84,3.59
-Panda,Panda,Itro,173337.94,3.35
-Reflections,Reflections,Kasger,279476.97,3.48
-Savage,Savage,Paul Flint,160824.33,3.31
-Savannah,Pill,Heuse & Zeus x Crona,290886.29,3.32
-Stardust,RICH,Raven & Kreyn,256752.51,3.32
-Stars,Stars,Diamond Eyes,5554.0,4.35
-Stay With Me,Lost,TULE,302062.53,3.37
-The Apocalypse,The Apocalypse,NIVIRO,189273.12,3.5
-The Return,Under Water,Fareoh,236518.66,3.14
-Time Leap,Time Leap,Aero Chord,138831.61,3.49
-Tropic Love,Tropic Love,Diviners feat. Contacreast,258907.6,3.59
-Under Water,Under Water,Fareoh,136590.25,3.04
-Wait For Me,Wait For Me,Giraffe Squad,243840.89,3.4
-You And Me,You And Me,Distrion & Electro-Light,273909.64,3.1
-You,You,Axol x Alex Skrindo,157379.04,3.25
+4U,4U,Convex,308472.66,5.05
+23,23,Diamond Eyes,227486.88,5.25
+Watch The World Burn,Nekozilla,Different Heaven,297238.24,5.47
+Ark,Ark,Ship Wrek & Zookeepers,183458.17,4.77
+Arrow,Dancefloor,3rd Prototype,226594.74,5.34
+Awakening,Under Water,Fareoh,254560.2,5.89
+Be Around,Under Water,Fareoh,281083.17,5.35
+Blank VIP,Blank VIP,Disfigure,262309.57,5.76
+Blank,Blank,Disfigure,134702.99,5.03
+Bleed,Dancefloor,3rd Prototype,295149.61,5.44
+C U Again,Castle,Clarx & Harddope,282541.95,4.83
+Castle,Castle,Clarx & Harddope,151072.01,4.78
+Cetus,Puzzle,RetroVision,351759.59,5.49
+Circles,Lost,TULE,293116.28,5.17
+Clear My Head,Clear My Head,Ellis,163396.46,5.04
+Close,Under Water,Fareoh,258928.35,5.19
+Coming Home,Coming Home,SirensCeol,293427.13,5.62
+Control,Control,Unknown Brain x Rival,227046.78,4.78
+Cradles,Lost,TULE,318464.59,5.53
+Crazy,Crazy,BEAUZ & JVNA,234529.03,4.74
+Crest,Crest,Codeko,96948.19,6.14
+Cyberpunk,Lost,TULE,293223.1,5.06
+Dancefloor,Dancefloor,3rd Prototype,214100.16,4.52
+Defeat The Night,Defeat The Night,"JPB, Ashley Apollodor",253509.94,5.03
+Devil,Devil,Barren Gates,4502.91,5.41
+Dino,Dino,Mountkid,231026.65,4.87
+Dreams pt. II,Dancefloor,3rd Prototype,282077.31,4.91
+Dreams,Dreams,Lost Sky,267411.09,4.81
+Earth,Lost,TULE,302754.38,4.91
+Eclipse,Dancefloor,3rd Prototype,249239.41,4.75
+Energy,Energy,Elektronomia,133647.09,4.75
+Enslaved,Lost,TULE,296081.3,4.9
+Entropy,Entropy,Distrion & Alex Skrindo,224285.67,4.88
+Fall To Light,Fall To Light,Laszlo,217171.79,4.72
+Fearless pt. II,Fearless pt. II,Tule feat. Chris Linton,239651.14,5.1
+Fearless,Fearless,TULE,168947.64,4.77
+Feel Good,Feel Good,Syn Cole,270451.71,4.97
+Fingertips,Fingertips,Kisma,133097.7,5.36
+Firefly,Dancefloor,3rd Prototype,267632.37,5.29
+Flares,Flares,NIVIRO,223610.14,4.84
+Flutter,Lost,TULE,308630.79,5.19
+Fly,Fly,Fransis Derelle,161277.29,4.91
+Forever,Dancefloor,3rd Prototype,280327.01,6.21
+Freakshow,Under Water,Fareoh,305584.59,5.27
+Free Fall,Nekozilla,Different Heaven,296969.3,4.92
+Free,Under Water,Fareoh,262936.1,4.77
+Game Over,Castle,Clarx & Harddope,286729.33,5.13
+H.A.Y,Dancefloor,3rd Prototype,297455.56,5.02
+Heavyweight,Heavyweight,RedMoon & Meron Ryan,139581.05,4.94
+Hellcat,Under Water,Fareoh,268906.71,5.35
+Heroes Tonight,Heroes Tonight,"Janji, Johnning",260398.29,5.04
+High,High,JPB,202311.5,4.99
+Howling (Andromedik Remix),Dancefloor,3rd Prototype,246954.61,4.76
+Howling,Castle,Clarx & Harddope,278649.94,4.81
+Immortality,Dancefloor,3rd Prototype,268895.31,4.83
+Invincible,Fall To Light,Laszlo,315525.55,5.77
+Invisible,Dancefloor,3rd Prototype,272762.2,4.85
+Jumbo,Jumbo,Alex Skrindo,242291.82,5.24
+Keep You,Keep You,"Spektrum, Sara Skinner",262343.17,5.44
+Let's Go!,Let's Go!,Lensko,279986.03,5.22
+Light It Up,Light It Up,Robin Hustin x TobiMorrow,174101.66,5.03
+Lights,Under Water,Fareoh,268265.92,5.57
+Limitless,Dancefloor,3rd Prototype,280462.4,5.31
+Link,Link,Jim Yosef,251878.23,5.19
+Linked,Dancefloor,3rd Prototype,270205.61,5.22
+Little Bit,Dancefloor,3rd Prototype,286921.22,5.73
+Lost,Lost,TULE,93826.76,5.05
+Love U,Under Water,Fareoh,361769.13,6.14
+Lune,Castle,Clarx & Harddope,462352.56,7.57
+Make A Stand,Castle,Clarx & Harddope,284190.17,5.17
+Make Me Move [Tobu Remix],Make Me Move [Tobu Remix],Culture Code,137083.5,5.01
+Make Me Move,Make Me Move,Culture Code,275690.59,5.43
+MATAFAKA,MATAFAKA,Unknown Brain,159869.7,5.79
+Memes,Memes,NIVIRO,259943.46,5.42
+Memory,Under Water,Fareoh,253887.19,5.72
+Miles Away,Miles Away,"Wontolla, Kasger & Limitless",217260.16,5.46
+Mortals,Mortals,"Warriyo, Laura Brehm",162055.46,5.34
+My Heart,My Heart,"Different Heaven, EH!DE",244822.74,5.8
+Nekozilla,Nekozilla,Different Heaven,213646.66,5.02
+Oblivion,Under Water,Fareoh,291420.84,5.58
+OMG,OMG,Different Heaven,159964.97,5.24
+On & On,Lost,TULE,289339.88,5.1
+Outlaw,Puzzle,RetroVision,327764.09,5.56
+Pain,Under Water,Fareoh,296026.98,5.65
+Panda,Dancefloor,3rd Prototype,262917.48,5.9
+Passion,Passion,Jim Yosef & Alex Skrindo,253699.69,6.05
+Pentakill,Under Water,Fareoh,262327.48,5.4
+Phenomenon,Phenomenon,Unknown Brain & Hoober,255464.49,5.07
+Phoenix,Under Water,Fareoh,273463.21,5.71
+Pill,Pill,Heuse & Zeus x Crona,276469.84,4.92
+Popsicle,Under Water,Fareoh,258967.05,6.05
+Puzzle,Puzzle,RetroVision,233415.72,5.44
+Red Line,Under Water,Fareoh,277608.81,6.3
+Redemption,Under Water,Fareoh,291260.54,5.54
+Reflections,Reflections,Kasger,279476.97,14.14
+Remember,Remember,Levianth & Axol,178414.84,13.68
+RICH,RICH,Raven & Kreyn,221605.11,7.96
+Rise Up,Dancefloor,3rd Prototype,263801.86,7.07
+Roots,Roots,Tobu,169522.67,7.49
+Royalty (Wiguez & Alltair Remix),Royalty (Wiguez & Alltair Remix),"Egzod, Maestro Chives",156207.29,6.73
+Royalty,Under Water,Fareoh,273317.27,6.15
+Rubik,Rubik,Distrion & Electro-Light,262858.22,6.12
+Runaway,Under Water,Fareoh,287830.7,5.73
+Safe & Sound,Under Water,Fareoh,271982.84,5.56
+Savage,Savage,Paul Flint,160824.33,5.44
+Savannah,Pill,Heuse & Zeus x Crona,290886.29,6.26
+Seasons,Lost,TULE,338155.94,6.83
+Shadows,Lost,TULE,295933.93,5.65
+Shine,Dancefloor,3rd Prototype,273222.95,5.58
+Shootin Stars,Under Water,Fareoh,294436.5,5.57
+Sky High pt. II,Dancefloor,3rd Prototype,253925.01,5.59
+Sky High,Dancefloor,3rd Prototype,262923.16,5.88
+So Happy,So Happy,Raven & Kreyn,121771.9,6.45
+Stardust,RICH,Raven & Kreyn,256752.51,5.76
+Stars,Stars,Diamond Eyes,5554.0,6.49
+Start That Fire,Start That Fire,ÉWN & Whogaux,215431.21,4.7
+Stay With Me,Lost,TULE,302062.53,4.97
+Stronger (Raiko Remix),Stronger (Raiko Remix),Prismo,198351.84,4.69
+Stronger,Under Water,Fareoh,293643.8,5.28
+Superhero,Superhero,Unknown Brain (feat. Chris Linton),263906.98,5.21
+Survive,Lost,TULE,317739.34,6.36
+Symbolism pt. II,Lost,TULE,322076.27,6.98
+Symbolism,Lost,TULE,326035.17,6.75
+The Apocalypse,The Apocalypse,NIVIRO,189273.12,5.99
+The Ghost,The Ghost,NIVIRO,208761.46,5.47
+The Light,The Light,Tetrix Bass Feat. Veela,236288.13,5.17
+The Return,Under Water,Fareoh,236518.66,5.33
+The Wizard,Dancefloor,3rd Prototype,268949.58,5.32
+Throwback,Under Water,Fareoh,242126.02,4.86
+Time Leap,Time Leap,Aero Chord,138831.61,5.15
+To Myself,Dancefloor,3rd Prototype,277921.38,4.81
+Tropic Love,Tropic Love,Diviners feat. Contacreast,258907.6,5.16
+Turn It Up,Under Water,Fareoh,313150.71,5.12
+Under Water,Under Water,Fareoh,136590.25,4.61
+Undone,Undone,Desmeon,250542.03,5.11
+Versace,Castle,Clarx & Harddope,271470.37,4.39
+Vision,Castle,Clarx & Harddope,275918.67,5.38
+Wait For Me,Wait For Me,Giraffe Squad,243840.89,4.99
+Way Back Home,Castle,Clarx & Harddope,330287.26,4.94
+We Are (Kisma),Dancefloor,3rd Prototype,292726.23,5.03
+We Are,We Are,Jo Cohen & Sex Whales,241755.7,5.01
+Weakness,Weakness,Prismo,269985.19,4.74
+Where We Started,Where We Started,Lost Sky,308856.58,4.78
+Why Do I?,Lost,TULE,321154.23,4.79
+Why We Lose,Dancefloor,3rd Prototype,274342.88,4.53
+Willow Tree,Willow Tree,Rival x Cadmium,154495.87,4.8
+You & I,Under Water,Fareoh,261223.02,4.76
+You And Me,You And Me,Distrion & Electro-Light,273909.64,4.24
+You,You,Axol x Alex Skrindo,157379.04,4.39
+Zig Zag,Zig Zag,Clarx,241089.62,5.13
