@@ -5,6 +5,12 @@ from suport_function.matching import matching_features
 train_data = [
   {
     'csv_path': 'resources/csv/train.csv',
+    'params': {'frame_size': 0.050, 'frame_hop': 0.025, 'emphasis': 0.97, 'n_fft': 512, 'n_mels': 40, 'n_mfcc': 13},
+    'audio_path': 'resources/dataset/train',
+    'out_path': 'resources/features/train/0_050'
+  },
+  {
+    'csv_path': 'resources/csv/train.csv',
     'params': {'frame_size': 0.2, 'frame_hop': 0.1, 'emphasis': 0.97, 'n_fft': 512, 'n_mels': 40, 'n_mfcc': 13},
     'audio_path': 'resources/dataset/train',
     'out_path': 'resources/features/train/0_2'
@@ -33,6 +39,12 @@ test_data = {
     'duration_30': [
       {
         'csv_path': 'resources/csv/train.csv',
+        'params': {'frame_size': 0.050, 'frame_hop': 0.025, 'emphasis': 0.97, 'n_fft': 512, 'n_mels': 40, 'n_mfcc': 13},
+        'audio_path': 'resources/dataset/test/30',
+        'out_path': 'resources/features/test/30/0_050'
+      },
+      {
+        'csv_path': 'resources/csv/train.csv',
         'params': {'frame_size': 0.2, 'frame_hop': 0.1, 'emphasis': 0.97, 'n_fft': 512, 'n_mels': 40, 'n_mfcc': 13},
         'audio_path': 'resources/dataset/test/30',
         'out_path': 'resources/features/test/30/0_2'
@@ -57,6 +69,12 @@ test_data = {
       },
     ],
     'duration_50': [
+      {
+        'csv_path': 'resources/csv/train.csv',
+        'params': {'frame_size': 0.050, 'frame_hop': 0.025, 'emphasis': 0.97, 'n_fft': 512, 'n_mels': 40, 'n_mfcc': 13},
+        'audio_path': 'resources/dataset/test/50',
+        'out_path': 'resources/features/test/50/0_050'
+      },
       {
         'csv_path': 'resources/csv/train.csv',
         'params': {'frame_size': 0.2, 'frame_hop': 0.1, 'emphasis': 0.97, 'n_fft': 512, 'n_mels': 40, 'n_mfcc': 13},
@@ -85,6 +103,14 @@ test_data = {
 }
 
 matching_data = [
+  {
+    'matching_name': 'train_0050_with_test_30_0050',
+    'train_path': 'resources/features/train/0_050',
+    'test_path': 'resources/features/test/30/0_050',
+    'train_csv': 'resources/csv/train.csv',
+    'test_csv': 'resources/csv/train.csv',
+    'out_path': 'resources/matching/train_0050_with_test_30_0050.csv'
+  },
   {
     'matching_name': 'train_02_with_test_30_02',
     'train_path': 'resources/features/train/0_2',
@@ -124,6 +150,14 @@ matching_data = [
     'train_csv': 'resources/csv/train.csv',
     'test_csv': 'resources/csv/train.csv',
     'out_path': 'resources/matching/train_02_with_test_50_02.csv'
+  },
+  {
+    'matching_name': 'train_0050_with_test_50_0050',
+    'train_path': 'resources/features/train/0_050',
+    'test_path': 'resources/features/test/50/0_050',
+    'train_csv': 'resources/csv/train.csv',
+    'test_csv': 'resources/csv/train.csv',
+    'out_path': 'resources/matching/train_0050_with_test_50_0050.csv'
   },
   {
     'matching_name': 'train_05_with_test_50_05',

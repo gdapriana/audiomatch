@@ -37,7 +37,7 @@ def matching_single(database, features):
   for data in database:
     train_data = np.load(data['npy_path'])
     distance, _ = fastdtw(train_data, features)
-    result.append({ 'predicted': data['title'], 'distance': distance })
+    result.append({ 'predicted title': data['title'], 'artist': data['artist'], 'distance': distance })
   min_distance = min(result, key=lambda x: x['distance'])
   return min_distance
 

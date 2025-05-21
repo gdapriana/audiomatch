@@ -58,3 +58,4 @@ def extract_single(audio, params: dict) -> np.ndarray:
     n_mels=params['n_mels'],
     n_mfcc=params['n_mfcc']
   )
+

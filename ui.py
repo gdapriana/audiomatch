@@ -14,14 +14,33 @@ params: dict = {
 }
 
 if __name__ == '__main__':
-  audio = st.file_uploader("Upload an audio file", type=["mp3"])
-  train_csv = pd.read_csv("resources/csv/train.csv")
-  database = []
+  st.title("AUDIOMATCH")
+  st.text("Ever heard a song playing and wondered what it is? With AudioMatch, just let the app listen for a few seconds — and we’ll tell you the song title, artist, and more in moments!")
+  tab1, tab2 = st.tabs(["detection", "dataset"])
 
-  for i, row in train_csv.iterrows():
-    database.append({'title': row['title'], 'npy_path': f"resources/features/train/1_0/{row['title']}.npy"})
+  with tab1:
+    audio = st.file_uploader("Upload an audio file", type=["mp3"])
+    train_csv = pd.read_csv("resources/csv/train.csv")
+    database = []
 
-  if audio is not None:
-    features = extract_single(audio, params)
-    result = matching_single(database, features)
-    st.text(result)
+    for i, row in train_csv.iterrows():
+      database.append({'title': row['title'], 'artist': row['artist'], 'npy_path': f"resources/features/train/1_0/{row['title']}.npy"})
+
+    if audio is not None:
+      features = extract_single(audio, params)
+      result = matching_single(database, features)
+
+      st.subheader('Prediction')
+      st.dataframe(result)
+
+  with tab2:
+    st.header("DATASET USED")
+    st.text("The dataset is from No Copyright Sound")
+    df = pd.read_csv("resources/csv/train.csv")
+    st.divider()
+    st.dataframe(df.drop(columns=['link']))
+
+
+
+
+

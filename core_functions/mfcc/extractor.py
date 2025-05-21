@@ -15,6 +15,7 @@ def extract_mfcc(
   n_mfcc: int,
   audio_title: str = None,
   out_path: str = None,
+  duration: str = None
 ) -> Union[np.ndarray, None]:
   """
   Extracts Mel-Frequency Cepstral Coefficients (MFCCs) from an audio file.
@@ -32,6 +33,7 @@ def extract_mfcc(
   :param n_fft: An integer representing the number of FFT points.
   :param n_mels: An integer representing the number of Mel filter banks.
   :param n_mfcc: An integer representing the number of MFCC coefficients to retain.
+  :param duration: A string representing the duration of the audio file.
 
   :return:
       - A 2D NumPy array of shape `(n_frames, n_mfcc)`, containing the extracted MFCC features if `out_path` is None.
@@ -54,6 +56,10 @@ def extract_mfcc(
           n_mfcc=13
       )
       ```
+
+  Parameters
+  ----------
+  duration
   """
 
   # params validation
@@ -65,6 +71,12 @@ def extract_mfcc(
 
   signal, sampling_rate = librosa.load(audio_path)
   signal = 1.0 * signal
+
+  if duration is not None:
+    if duration == 'duration_30':
+      signal = ambil_rentang(signal, 0.3)
+    else:
+      signal = ambil_rentang(signal, 0.5)
 
   emphased_signal = pre_emphasis(signal=signal, coefficients=emphasis)
   framed_signal = frame_blocking(signal=emphased_signal, sampling_rate=sampling_rate, frame_size=frame_size, frame_hop=frame_hop)
@@ -79,3 +91,20 @@ def extract_mfcc(
     return None
   else:
     return features
+
+
+
+def ambil_rentang(sinyal: np.ndarray, persentase: float) -> np.ndarray:
+  if sinyal.ndim != 1:
+    raise ValueError("Input sinyal harus berupa array 1 dimensi.")
+  if not (0 < persentase <= 1):
+    raise ValueError("Persentase harus antara 0 dan 1 (tidak termasuk 0).")
+
+  total_panjang = len(sinyal)
+  panjang_potongan = int(total_panjang * persentase)
+
+  if panjang_potongan < 1:
+    raise ValueError("Hasil potongan terlalu kecil. Perbesar persentase atau panjang sinyal.")
+
+  start_idx = np.random.randint(0, total_panjang - panjang_potongan + 1)
+  return sinyal[start_idx:start_idx + panjang_potongan]
