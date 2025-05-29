@@ -1,0 +1,21 @@
+
+## Download The Sources
+Download source file from the drive:
+https://drive.google.com/drive/folders/1NnXuMb7-PuDy1MJR5pqU5nUiuJ-4Qemj?usp=sharing
+
+or clone from repository:
+https://github.com/gdapriana/audiomatch.git.
+
+
+## Install the package.
+make sure your computer reaches the required specifications:
+1. Python 3.10
+2. PIP
+
+then run `python3 -m pip install -r requirements.txt` in your terminal. (wait until finished)
+
+## activate the venv
+run `./audiomatch/bin/activate` to activate the venv
+
+## run main.py to get the identification result.
+`python3 main.py`
